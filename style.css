@@ -220,7 +220,7 @@ footer {
 .gallery-item {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Resmi kutuya sığdırır */
+    object-fit: contain; /* Resmi kutuya sığdırır */
     border-radius: 5px;
     cursor: pointer; /* Fare imlecini el şekline getirir */
     transition: transform 0.3s, opacity 0.3s;

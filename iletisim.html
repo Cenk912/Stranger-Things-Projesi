@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Stranger Things</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="main-header">
+        <h1>Bize Ulaşın</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li class="dropdown">
+                    <a href="karakterler.html">KARAKTERLER</a>
+                    <ul class="submenu">
+                        <li><a href="#eleven">Eleven</a></li>
+                        <li><a href="#dustin">Dustin</a></li>
+                        <li><a href="#hopper">Hopper</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeri.html">GALERİ</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-form-container">
+            <h2>İletişim Formu</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="button" id="sendButton">Gönder</button>
+            </form>
+            <p id="responseMessage" class="hidden-message"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stranger Things Fan Projesi. Tüm hakları gizlidir.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

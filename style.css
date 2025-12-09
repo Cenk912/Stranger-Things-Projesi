@@ -1,0 +1,307 @@
+/* Genel Ayarlar ve Font */
+body {
+    font-family: 'Arial', sans-serif; /*  */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Koyu tema */
+    color: #f0f0f0;
+}
+
+/* HEADER ve Başlık Stilleri */
+.main-header {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #E50914; /* Kırmızı vurgu */
+}
+
+.main-header h1 {
+    color: #E50914;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+/* NAVİGASYON (Menü) Stilleri */
+.main-nav ul {
+    list-style: none; /* Noktaları kaldırır */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Yatay sıralama için Flexbox kullanıyoruz */
+    justify-content: center; /* Ortalamak için */
+}
+
+.main-nav li {
+    margin: 0 15px;
+    position: relative; /* Alt menü için konumlandırma ayarı */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+.main-nav a:hover {
+    background-color: #E50914;
+    color: white;
+}
+
+
+/* ALT MENÜ (Dropdown) Stilleri -  */
+.submenu {
+    opacity: 0; /* Başlangıçta görünmez (şeffaflık 0) */
+    visibility: hidden; /* Etkileşime kapalı tut */
+    transition: opacity 0.3s, visibility 0.3s; /* Yumuşak geçiş ekle */
+    
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: #444;
+    min-width: 150px;
+    z-index: 10; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover .submenu {
+    opacity: 1; /* Fare üzerine gelince tam görünür yap */
+    visibility: visible; /* Tıklanabilir yap */
+}
+
+.submenu li {
+    margin: 0;
+    border-top: 1px solid #555;
+}
+
+.submenu a {
+    padding: 10px 20px;
+}
+
+/* İÇERİK ve DİV Stilleri */
+main {
+    padding: 20px;
+}
+
+.intro-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Resim Orantılama ve Linkli Resim Stilleri */
+.content-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.content-grid img {
+    width: 100%; /* Kapsayıcının tamamını kapla */
+    height: 250px; /* Sabit bir yükseklik veriyoruz */
+    object-fit: contain; /* Resmi orantılı olarak keserek alanı doldurur (Önemli: Orantı) */
+    border: 3px solid #8B0000; /* Resim çerçevesi */
+    transition: transform 0.3s;
+}
+
+.content-grid a, .content-grid img {
+    flex-basis: 30%; /* Her resim/link için %30 alan ayır */
+    text-align: center;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.content-grid a:hover img {
+    transform: scale(1.05); /* Resme hover efekti */
+}
+
+/* FOOTER Stilleri */
+footer {
+    background-color: #333;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    /* position: fixed; Bu koyu temadan dolayı footer'ın sabit kalmasını istemeyebiliriz, şimdilik yoruma alalım. */
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* İLETİŞİM SAYFASI STİLLERİ */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Ekranın ortasına yakın durması için */
+    padding: 50px 20px;
+}
+
+.contact-form-container {
+    background-color: #2b2b2b;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    color: #E50914;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+    box-sizing: border-box; /* Padding'in genişliği artırmasını engeller */
+}
+
+#sendButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#sendButton:hover {
+    background-color: #c00810;
+}
+
+/* Mesaj gösterim stili */
+.hidden-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1a5e1a; /* Yeşil arka plan */
+    color: white;
+    border-radius: 5px;
+    display: none; /* Başlangıçta gizli tut */
+}
+
+/* Görünen mesaj için sınıf */
+.visible-message {
+    display: block;
+}
+/* GALERİ SAYFASI STİLLERİ */
+.gallery-grid {
+    display: grid;
+    /* 5 sütunlu bir ızgara yapısı kuruyoruz */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Resmi kutuya sığdırır */
+    border-radius: 5px;
+    cursor: pointer; /* Fare imlecini el şekline getirir */
+    transition: transform 0.3s, opacity 0.3s;
+    border: 3px solid #E50914;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* MODAL (BÜYÜK RESİM GÖSTERİMİ) STİLLERİ */
+.modal {
+    /* Başlangıçta gizli tut */
+    display: none; 
+    /* Ekranın tamamını kaplar */
+    position: fixed; 
+    z-index: 1000; /* Diğer her şeyin üstünde olmasını sağlar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Hafif siyah, yarı şeffaf arka plan */
+    background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal içindeki resim */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin-top: 50px;
+}
+
+/* Kapatma butonu */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* KARAKTER SAYFASI STİLLERİ */
+.character-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.character-card {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.character-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #E50914;
+}
+
+.character-card h3 {
+    color: #f0f0f0;
+    margin-top: 0;
+}

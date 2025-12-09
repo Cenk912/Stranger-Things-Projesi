@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Stranger Things</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="main-header">
+        <h1>Stranger Things Görsel Galerisi</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li class="dropdown">
+                    <a href="karakterler.html">KARAKTERLER</a>
+                    <ul class="submenu">
+                        <li><a href="#eleven">Eleven</a></li>
+                        <li><a href="#dustin">Dustin</a></li>
+                        <li><a href="#hopper">Hopper</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeri.html">GALERİ</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Hawkins'in En Gizemli Anları</h2>
+        
+        <div class="gallery-grid">
+            <img src="images/kucuk_resim_1.jpg" alt="Demogorgon" class="gallery-item" data-src="images/buyuk_resim_1.jpg">
+            <img src="images/kucuk_resim_2.jpg" alt="Eleven" class="gallery-item" data-src="images/buyuk_resim_2.jpg">
+            <img src="images/kucuk_resim_3.jpg" alt="Bisiklet" class="gallery-item" data-src="images/buyuk_resim_3.jpg">
+            <img src="images/kucuk_resim_4.jpg" alt="Grup" class="gallery-item" data-src="images/buyuk_resim_4.jpg">
+            <img src="images/kucuk_resim_5.png" alt="Hawkins Laboratuvarı" class="gallery-item" data-src="images/buyuk_resim_5.png">
+        </div>
+    </main>
+    
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span> 
+        <img class="modal-content" id="modalImage" src="">
+        <div id="caption"></div> 
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Stranger Things Fan Projesi. Tüm hakları gizlidir.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

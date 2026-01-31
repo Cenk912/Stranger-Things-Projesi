@@ -1,10 +1,18 @@
 /* Genel Ayarlar ve Font */
+:root {
+  --neon-red: #ff0000;
+  --dark-bg: #050505;
+  --upside-down-blue: #001a33;
+  --text-color: #ffffff;
+}
 body {
-    font-family: 'Arial', sans-serif; /*  */
+   
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Koyu tema */
-    color: #f0f0f0;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'ITC Benguiat', serif;
+    
 }
 
 /* HEADER ve Başlık Stilleri */

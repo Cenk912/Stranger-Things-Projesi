@@ -312,4 +312,22 @@ footer {
 .character-card h3 {
     color: #f0f0f0;
     margin-top: 0;
+ 
+
+.neon-buton {
+  background-color: black;
+  color: #ff0000;
+  border: 3px solid #ff0000;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0000, inset 0 0 10px #ff0000;
+  animation: titreme 2s infinite;
 }
+
+@keyframes titreme {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}}

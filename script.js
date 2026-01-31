@@ -67,7 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('click', function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                
             }
-        });
+            function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('upside-down-mode');
+    
+    if(body.classList.contains('upside-down-mode')) {
+        body.style.filter = "hue-rotate(180deg) contrast(1.2) brightness(0.8)";
+        console.log("Upside Down dünyasına geçildi!");
+    } else {
+        body.style.filter = "none";
+    }
+}        });
     }
 }); 
